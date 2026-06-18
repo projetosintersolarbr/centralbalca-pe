@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balca | Distribuição e Indústria de Utilidades Domésticas Direto de Fábrica</title>
+    <!-- Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para ícones expressivos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a',    /* Slate 900 */
+                        secondary: '#1e293b',  /* Slate 800 */
+                        accent: '#ea580c',     /* Laranja Balca */
+                        accentHover: '#c2410c',/* Laranja Escuro */
+                        success: '#16a34a',    /* Verde Sucesso */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .tab-active { border-color: #ea580c; color: #ea580c; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Topbar B2B com Informações Importantes -->
+    <div class="bg-primary text-slate-300 text-xs py-2 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span><i class="fa-solid fa-industry text-accent mr-1"></i> Fábrica Própria | Rio Grande do Sul</span>
+                <span><i class="fa-solid fa-truck text-accent mr-1"></i> Logística para Todo o Brasil</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="font-semibold text-white"><i class="fa-solid fa-box-open text-accent mr-1"></i> Pedido Mínimo B2B: R$ 1.000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="bg-accent text-white p-2.5 rounded-lg shadow-md flex items-center justify-center">
+                    <i class="fa-solid fa-kitchen-set text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-primary">BALCA</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-slate-500 font-bold">Utilidades Domésticas</span>
+                </div>
+            </div>
+
+            <!-- CNPJ e Status no Header -->
+            <div class="hidden md:flex flex-col items-end">
+                <span class="text-xs font-semibold text-slate-500">CNPJ: 04.533.318/0001-99</span>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                    <span class="h-2 w-2 rounded-full bg-success animate-pulse"></span>
+                    <span class="text-xs font-bold text-success uppercase tracking-wider">Cadastro Ativo na Receita</span>
+                </div>
+            </div>
+            
+            <a href="#contato" class="bg-accent hover:bg-accentHover text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all transform hover:-translate-y-0.5 flex items-center gap-2 shadow-sm">
+                <i class="fa-solid fa-download"></i> Baixar Catálogo
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção de Serviços e Linhas de Atuação em Destaque no Topo -->
+    <section class="bg-slate-100 border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center md:text-left mb-4">
+                <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-1">Navegação de Segmentos</span>
+                <h2 class="text-lg font-extrabold text-primary flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-list-check text-accent"></i> Nossas Principais Linhas de Serviço & Produção:
+                </h2>
+            </div>
+            
+            <!-- Grid de Atalhos de Serviços Industriais -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <!-- Serviço 1 -->
+                <a href="#linha-metal" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-accent hover:shadow-md transition-all duration-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-orange-50 text-accent rounded-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            <i class="fa-solid fa-cubes text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900 group-hover:text-accent transition-all">Artigos de Metal</h4>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Uso doméstico e pessoal</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Serviço 2 -->
+                <a href="#linha-plastico" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-accent hover:shadow-md transition-all duration-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-orange-50 text-accent rounded-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            <i class="fa-solid fa-flask-vial text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900 group-hover:text-accent transition-all">Injeção Plástica</h4>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Artefatos sob medida</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Serviço 3 -->
+                <a href="#terceirizacao" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-accent hover:shadow-md transition-all duration-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-orange-50 text-accent rounded-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            <i class="fa-solid fa-gears text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900 group-hover:text-accent transition-all">Private Label (OEM)</h4>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Produção terceirizada</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Serviço 4 -->
+                <a href="#distribuicao" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-accent hover:shadow-md transition-all duration-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-orange-50 text-accent rounded-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            <i class="fa-solid fa-truck-fast text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900 group-hover:text-accent transition-all">Distribuição Direta</h4>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Faturamento facilitado</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section Voltado para Atacado de Alta Performance -->
+    <section class="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 text-white overflow-hidden py-16 lg:py-24">
+        <!-- Overlay decorativo com padrão industrial -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna de Cópia Comercial (Copywriting) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">
+                        <i class="fa-solid fa-award"></i> Desde 2001 • 25 Anos de Tradição Industrial
+                    </div>
+                    
+                    <h1 class="text-3.5xl md:text-5xl font-black leading-tight tracking-tight">
+                        Fabricante de utilidades domésticas em <span class="text-accent">metal e plástico</span> para distribuidores e lojistas.
+                    </h1>
+                    
+                    <p class="text-slate-350 text-base md:text-lg max-w-xl">
+                        Garanta abastecimento direto de fábrica da matriz em Arvorezinha-RS. Linhas completas de alta rotatividade com margem de revenda acima da média do mercado.
+                    </p>
+
+                    <!-- Benefícios Rápidos com Ícones -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent bg-accent/10 p-2 rounded-lg mt-0.5"><i class="fa-solid fa-check-double"></i></span>
+                            <div>
+                                <h3 class="font-bold text-sm">Pedido Mínimo de R$ 1.000</h3>
+                                <p class="text-xs text-slate-400">Excelente para pequenos e grandes estoques.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent bg-accent/10 p-2 rounded-lg mt-0.5"><i class="fa-solid fa-truck-ramp-box"></i></span>
+                            <div>
+                                <h3 class="font-bold text-sm">Logística Integrada Nacional</h3>
+                                <p class="text-xs text-slate-400">Envio seguro com transportadoras parceiras.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent bg-accent/10 p-2 rounded-lg mt-0.5"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                            <div>
+                                <h3 class="font-bold text-sm">Faturamento Facilitado</h3>
+                                <p class="text-xs text-slate-400">Processo ágil para empresas optantes do Simples.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent bg-accent/10 p-2 rounded-lg mt-0.5"><i class="fa-solid fa-industry"></i></span>
+                            <div>
+                                <h3 class="font-bold text-sm">Qualidade de Origem Industrial</h3>
+                                <p class="text-xs text-slate-400">Produzido no polo industrial gaúcho.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Leads Focado em Campanhas (Google Ads) -->
+                <div class="lg:col-span-5" id="contato">
+                    <div class="bg-white rounded-2xl p-6 lg:p-8 text-slate-900 shadow-2xl border border-slate-100">
+                        <h3 class="text-xl font-extrabold text-primary tracking-tight">Fale com Nossa Distribuição</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-6">Preencha abaixo para receber nossa tabela exclusiva de preços por atacado.</p>
+                        
+                        <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1" for="name">Responsável / Compras</label>
+                                <input class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:border-accent focus:bg-white transition-all" type="text" id="name" required placeholder="Digite seu nome completo">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1" for="cnpj">CNPJ da Empresa</label>
+                                    <input class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:border-accent focus:bg-white transition-all" type="text" id="cnpj" placeholder="00.000.000/0000-00">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1" for="whatsapp">WhatsApp Comercial</label>
+                                    <input class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:border-accent focus:bg-white transition-all" type="tel" id="whatsapp" required placeholder="(51) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1" for="segment">Seu Segmento de Atuação</label>
+                                <select class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:border-accent focus:bg-white transition-all" id="segment" required>
+                                    <option value="" disabled selected>Selecione uma opção</option>
+                                    <option value="distribuidor">Distribuidora de Utilidades</option>
+                                    <option value="loja">Loja de Variedades / 1,99</option>
+                                    <option value="supermercado">Supermercado / Bazar</option>
+                                    <option value="outros">Outros Negócios B2B</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white py-3 rounded-lg font-bold text-sm tracking-wide transition-all shadow-md transform active:scale-95 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> SOLICITAR ACESSO AO CATÁLOGO
+                            </button>
+                            
+                            <p class="text-[10px] text-center text-slate-400 mt-2">
+                                <i class="fa-solid fa-shield-halved"></i> Seus dados estão 100% protegidos pela LGPD.
+                            </p>
+                        </form>
+
+                        <!-- Mensagem de sucesso oculta -->
+                        <div id="successMessage" class="hidden text-center py-6 space-y-4">
+                            <div class="mx-auto w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Solicitação Enviada com Sucesso!</h4>
+                                <p class="text-xs text-slate-500 mt-1">Nossa equipe comercial entrará em contato em breve. Clique abaixo para iniciar atendimento instantâneo.</p>
+                            </div>
+                            <a id="successWhatsappLink" href="#" target="_blank" class="inline-flex items-center gap-2 bg-success hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all w-full justify-center shadow">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Chamar no WhatsApp Agora
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposta de Valor e Diferenciais Industriais -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-accent font-extrabold text-sm tracking-widest uppercase">Vantagens Competitivas</span>
+                <h2 class="text-3xl font-black text-primary tracking-tight mt-1">Por que escolher a Balca?</h2>
+                <p class="text-slate-500 text-sm mt-3">Com mais de duas décadas de expertise industrial no sul do Brasil, oferecemos vantagens sólidas e um modelo comercial que potencializa o faturamento do seu bazar ou distribuidora.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all hover:border-slate-200">
+                    <div class="text-accent bg-orange-100/50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-3">Preço sem Intermediários</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Compre diretamente de nossa indústria em Arvorezinha-RS, garanta a margem máxima de lucro para sua rede e desfrute de vantagens tributárias facilitadas.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all hover:border-slate-200">
+                    <div class="text-accent bg-orange-100/50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-hourglass-start"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-3">Abastecimento Contínuo</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Nosso cronograma produtivo é altamente planejado. Evite rupturas no seu estoque com prazos de entrega ágeis, controlados e rastreáveis de ponta a ponta.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all hover:border-slate-200">
+                    <div class="text-accent bg-orange-100/50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-3">Controle Rigoroso de Matéria-Prima</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Fabricamos utilidades sob rigoroso padrão gaúcho, utilizando ligas metálicas certificadas e polímeros virgens resistentes para garantir que o consumidor final recomende seu comércio.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Interativa: Simulador de Orçamento de Atacado -->
+    <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-10">
+                <span class="text-accent text-xs font-bold uppercase tracking-wider">Simulador Comercial Interativo</span>
+                <h2 class="text-2xl md:text-3xl font-black mt-1">Estime seu Volume de Compras</h2>
+                <p class="text-xs text-slate-400 mt-2">Escolha uma categoria e configure a quantidade média estimada para visualizar descontos de fábrica.</p>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-700 shadow-xl">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Controles -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-350 uppercase tracking-wider mb-2">1. Selecione a Linha Principal:</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" onclick="setSimulateType('metal')" id="simTypeMetal" class="bg-slate-700 border-2 border-accent text-white px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-kitchen-set"></i> Artigos Metálicos
+                                </button>
+                                <button type="button" onclick="setSimulateType('plastico')" id="simTypePlastico" class="bg-slate-750 border border-slate-700 text-slate-350 hover:bg-slate-700 px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-box"></i> Artefatos Plásticos
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-350 uppercase tracking-wider">2. Ajuste o Valor de Compra Estimado:</span>
+                                <span class="text-accent" id="rangeValue">R$ 5.000</span>
+                            </div>
+                            <input type="range" id="budgetRange" min="1000" max="30000" step="500" value="5000" oninput="updateSimulation()" class="w-full accent-accent bg-slate-700 h-2 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                                <span>R$ 1.000 (Mínimo)</span>
+                                <span>R$ 30.000+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resultado da Simulação -->
+                    <div class="bg-slate-750 p-6 rounded-xl border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] bg-accent/20 text-accent font-extrabold px-2 py-1 rounded-md uppercase tracking-wider">Desconto Industrial Aplicado</span>
+                            <div class="mt-4">
+                                <div class="text-3xl font-black text-white" id="discountPercent">10% OFF</div>
+                                <p class="text-xs text-slate-400 mt-1">Margem média bruta estimada para revenda: <strong class="text-emerald-400" id="resMargin">38% a 45%</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-slate-700 pt-4 mt-4 space-y-3">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Condições de Frete:</span>
+                                <span class="font-bold text-white" id="shippingType">FOB (Parceiros)</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Atendimento Técnico:</span>
+                                <span class="font-bold text-white">Prioritário em SP, RS, SC e PR</span>
+                            </div>
+                            <a href="#contato" class="block text-center bg-accent hover:bg-accentHover text-white py-2.5 rounded-lg text-xs font-bold transition-all mt-2">
+                                Garantir Esta Condição Comercial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social Quantitativa (Estatísticas Corporativas) -->
+    <section class="bg-primary text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Dado 1 -->
+                <div class="space-y-1">
+                    <div class="text-4xl md:text-5xl font-black text-accent tracking-tight">25 Anos</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest font-semibold">De História Industrial</div>
+                </div>
+                <!-- Dado 2 -->
+                <div class="space-y-1">
+                    <div class="text-4xl md:text-5xl font-black text-accent tracking-tight">+1.500</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Parceiros de Revenda</div>
+                </div>
+                <!-- Dado 3 -->
+                <div class="space-y-1">
+                    <div class="text-4xl md:text-5xl font-black text-accent tracking-tight">100%</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Nacional e Próprio</div>
+                </div>
+                <!-- Dado 4 -->
+                <div class="space-y-1">
+                    <div class="text-4xl md:text-5xl font-black text-accent tracking-tight">Simples</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Nacional Ativo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Infraestrutura & Capacidade Técnica -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Galeria Simulada -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="h-44 rounded-2xl overflow-hidden shadow-md">
+                            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80" alt="Produção metalúrgica Balca">
+                        </div>
+                        <div class="h-60 rounded-2xl overflow-hidden shadow-md">
+                            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&q=80" alt="Plástico de injeção técnica">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="h-60 rounded-2xl overflow-hidden shadow-md">
+                            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=400&q=80" alt="Maquinário Balca">
+                        </div>
+                        <div class="h-44 rounded-2xl overflow-hidden shadow-md">
+                            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1513828742140-ccaa34f3bfc1?auto=format&fit=crop&w=400&q=80" alt="Logística de utilidades">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalhes de Tradição e Estrutura -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-accent font-extrabold text-sm tracking-widest uppercase">Tradição Industrial</span>
+                    <h2 class="text-3xl font-black text-primary tracking-tight">Parque Fabril Sólido em Arvorezinha-RS</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Fundada em 2001, a **Balca - Industria de Utilidades Domesticas LTDA** desenvolveu uma reputação inabalável no fornecimento de artigos metálicos e plásticos para todo o território nacional. 
+                    </p>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Nossos processos abrangem desde a moldagem, prensagem hidráulica de ligas metálicas, até as injetoras plásticas automáticas de alto rendimento. Isso nos confere uma flexibilidade de desenvolvimento única (tanto para produtos próprios quanto para atendimento em marcas brancas / Private Label).
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-success text-lg"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-xs font-bold text-slate-700">Injeção e fabricação integrada de acessórios plásticos e cabos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-success text-lg"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-xs font-bold text-slate-700">Controle dimensional rigoroso de metalurgia doméstica</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-success text-lg"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-xs font-bold text-slate-700">Cumprimento legal de acordos ambientais na cadeia produtiva</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades de Registro e Atuação Legal (CNAEs) -->
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-accent font-extrabold text-xs tracking-widest uppercase">Registro Econômico e Tributário</span>
+                <h2 class="text-2xl font-black text-primary tracking-tight mt-1">Conformidade e Classificação Fiscal</h2>
+                <p class="text-slate-500 text-xs mt-2">Nossas linhas produtivas estão devidamente registradas e operantes perante a Receita Federal do Brasil.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- CNAE Principal -->
+                <div id="linha-metal" class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/60 flex gap-4">
+                    <div class="text-accent text-3xl pt-1">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <div>
+                        <span class="bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Atividade Principal</span>
+                        <h3 class="font-bold text-lg text-primary mt-2">Metalurgia e Utensílios Domésticos</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Fabricação de artigos de metal para uso doméstico e pessoal. Envolve prensagem de ligas leves, fundição, montagem de panelas, assadeiras e utensílios metálicos de alta rotatividade.</p>
+                        <div class="mt-4 inline-block text-xs font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded">CNAE: 25.93-4-00</div>
+                    </div>
+                </div>
+
+                <!-- CNAE Secundário -->
+                <div id="linha-plastico" class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/60 flex gap-4">
+                    <div class="text-accent text-3xl pt-1">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <div>
+                        <span class="bg-slate-200 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Atividade Secundária</span>
+                        <h3 class="font-bold text-lg text-primary mt-2">Termoplásticos de Utilidade Doméstica</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Fabricação de artefatos de material plástico para uso pessoal e doméstico. Inclui potes organizadores, tampas, tampas plásticas para utilidades metálicas, cabos, recipientes e acessórios variados.</p>
+                        <div class="mt-4 inline-block text-xs font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded">CNAE: 22.29-3-01</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demais Serviços (Atalhos do Topo) -->
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <!-- Terceirização / OEM -->
+                <div id="terceirizacao" class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/60 flex gap-4">
+                    <div class="text-accent text-3xl pt-1">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <span class="bg-indigo-150 text-indigo-700 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-50">Solução Industrial</span>
+                        <h3 class="font-bold text-lg text-primary mt-2">Terceirização & Marcas Próprias (OEM)</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Disponibilizamos nossa estrutura fabril em Arvorezinha para fabricação terceirizada de utilidades sob a sua marca. Projetos completos com ferramentaria dedicada para alta escala comercial.</p>
+                    </div>
+                </div>
+
+                <!-- Distribuição e Faturamento -->
+                <div id="distribuicao" class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/60 flex gap-4">
+                    <div class="text-accent text-3xl pt-1">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div>
+                        <span class="bg-emerald-150 text-emerald-700 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-50">Eficiência Logística</span>
+                        <h3 class="font-bold text-lg text-primary mt-2">Distribuição e Faturamento Simplificado</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Processamento comercial simplificado para lojas e redes varejistas do Simples Nacional. Despacho sob agendamento e parcerias consolidadas de frete para otimizar seus custos logísticos.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ - Dúvidas Comuns de Revendedores B2B -->
+    <section class="py-16 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-accent text-xs font-bold uppercase tracking-widest">Dúvidas Frequentes</span>
+                <h2 class="text-2xl font-black text-primary mt-1">Perguntas Comerciais</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <button class="w-full text-left flex justify-between items-center font-bold text-sm text-primary" onclick="toggleFaq(1)">
+                        <span>Qual é o valor de faturamento mínimo para compras corporativas?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-accent"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden mt-3 text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        O nosso pedido comercial mínimo é de **R$ 1.000,00** faturados. Isso permite a lojistas de pequeno e médio porte manterem uma rotatividade saudável em gôndola sem necessitarem de altos desembolsos iniciais de caixa.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <button class="w-full text-left flex justify-between items-center font-bold text-sm text-primary" onclick="toggleFaq(2)">
+                        <span>Como funciona o faturamento tributário para fora do Rio Grande do Sul?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-accent"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden mt-3 text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        A Balca é optante pelo regime do Simples Nacional desde 2007. Emitimos Nota Fiscal Eletrônica (NF-e) com faturamento simplificado para todas as unidades da federação. Nosso departamento fiscal cuida dos cálculos de substituição tributária (se houver) para evitar surpresas aduaneiras.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <button class="w-full text-left flex justify-between items-center font-bold text-sm text-primary" onclick="toggleFaq(3)">
+                        <span>Vocês realizam desenvolvimento de marcas exclusivas?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-accent"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden mt-3 text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        Sim. Graças à nossa flexibilidade industrial na área de injeção termoplástica e conformação de metais, estruturamos soluções completas de **Private Label** (marca exclusiva do cliente). Os volumes mínimos de produção para projetos personalizados são avaliados individualmente pela diretoria comercial.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final e Faturamento Exclusivo -->
+    <section class="bg-gradient-to-r from-accent to-accentHover py-16 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 space-y-6">
+            <h2 class="text-2.5xl md:text-4xl font-black tracking-tight">Quer falar diretamente com nosso comercial no RS?</h2>
+            <p class="text-sm md:text-base text-orange-100 max-w-xl mx-auto">
+                Tire dúvidas de frete, faça cotações de carga fechada e conheça as facilidades comerciais diretamente com a nossa mesa de atendimento.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/5551999999999?text=Ol%C3%A1%21+Vim+da+p%C3%A1gina+de+atacado+da+Balca+e+gostaria+de+solicitar+a+tabela+de+pre%C3%A7os." class="inline-flex items-center gap-2.5 bg-white text-accent hover:bg-slate-50 px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all hover:scale-103" target="_blank">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> ENTRAR EM CONTATO NO WHATSAPP
+                </a>
+                <a href="#contato" class="inline-flex items-center gap-1.5 border border-white/60 hover:bg-white/10 px-6 py-4 rounded-xl font-bold text-sm transition-all">
+                    Solicitar Catálogo via E-mail
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão Flutuante de WhatsApp -->
+    <a href="https://wa.me/5551999999999?text=Ol%C3%A1%21+Vim+da+p%C3%A1gina+de+atacado+da+Balca+e+gostaria+de+solicitar+a+tabela+de+pre%C3%A7os." class="fixed bottom-6 right-6 bg-success hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2.5xl shadow-2xl z-50 transition-all hover:scale-110" target="_blank" title="Fale comercialmente pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Rodapé Corporativo e Compliance Google Ads -->
+    <footer class="bg-primary text-slate-400 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="grid md:grid-cols-12 gap-12 border-b border-slate-800 pb-12 mb-12">
+                <!-- Coluna 1 -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-accent text-white p-2 rounded flex items-center justify-center">
+                            <i class="fa-solid fa-kitchen-set text-sm"></i>
+                        </div>
+                        <span class="text-sm font-extrabold text-white tracking-widest">BALCA</span>
+                    </div>
+                    <p class="leading-relaxed text-slate-400">
+                        **Balca - Industria de Utilidades Domesticas LTDA** • CNPJ: 04.533.318/0001-99<br>
+                        Sua parceira ideal em abastecimento e injeção plástica / conformação metálica gaúcha desde 2001.
+                    </p>
+                    <p class="text-[10px] text-slate-500">
+                        Regime Tributário: Optante pelo Simples Nacional desde 01/07/2007. Natureza Jurídica: Sociedade Empresária Limitada. Porte: EPP.
+                    </p>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-bold text-white text-sm">Canais de Atendimento</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><i class="fa-solid fa-phone text-accent mr-1.5"></i> (51) 99999-9999</li>
+                        <li><i class="fa-solid fa-envelope text-accent mr-1.5"></i> contato@balca.com.br</li>
+                        <li><i class="fa-solid fa-clock text-accent mr-1.5"></i> Seg. a Sex. das 08:00 às 17:30</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-bold text-white text-sm">Planta de Produção Matriz</h4>
+                    <p class="leading-relaxed">
+                        Rua Berto Alberto Berton, 380<br>
+                        Bairro Centro • CEP: 95995-000<br>
+                        Arvorezinha - Rio Grande do Sul
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Berto+Alberto+Berton+380+Arvorezinha+RS" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:text-orange-400 font-bold mt-1 transition-all">
+                        <i class="fa-solid fa-map-location-dot"></i> Localizar no Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rodapé e Termos de Conformidade Google Ads -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-center md:text-left text-[11px] text-slate-500">
+                    &copy; 2026 Balca - Industria de Utilidades Domesticas LTDA. Todos os direitos reservados. CNPJ: 04.533.318/0001-99.
+                </p>
+                
+                <!-- Links Obrigatórios de Política de Privacidade de Landing Pages de Conversão -->
+                <div class="flex items-center gap-4 flex-wrap justify-center text-[11px] text-slate-500">
+                    <a href="#contato" class="hover:text-slate-300 transition-all">Política de Privacidade</a>
+                    <span>|</span>
+                    <a href="#contato" class="hover:text-slate-300 transition-all">Termos de Uso</a>
+                    <span>|</span>
+                    <a href="#contato" class="hover:text-slate-300 transition-all">Política de Cookies</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Script de Interações e Dinâmica da Landing Page -->
+    <script>
+        // Configuração de dados de simulação
+        let currentType = 'metal';
+
+        function setSimulateType(type) {
+            currentType = type;
+            const btnMetal = document.getElementById('simTypeMetal');
+            const btnPlast = document.getElementById('simTypePlastico');
+            
+            if (type === 'metal') {
+                btnMetal.className = 'bg-slate-700 border-2 border-accent text-white px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5';
+                btnPlast.className = 'bg-slate-750 border border-slate-700 text-slate-350 hover:bg-slate-700 px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5';
+            } else {
+                btnPlast.className = 'bg-slate-700 border-2 border-accent text-white px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5';
+                btnMetal.className = 'bg-slate-750 border border-slate-700 text-slate-350 hover:bg-slate-700 px-3 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5';
+            }
+            updateSimulation();
+        }
+
+        function updateSimulation() {
+            const range = document.getElementById('budgetRange');
+            const value = parseInt(range.value);
+            
+            // Formatando o valor em Real
+            document.getElementById('rangeValue').innerText = value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            
+            let discount = '5%';
+            let margin = '35% a 40%';
+            let shipping = 'FOB (Por conta do cliente)';
+            
+            if (value >= 15000) {
+                discount = '15% OFF';
+                margin = '42% a 50%';
+                shipping = 'FOB Especial (Consulte condições de Subsídio)';
+            } else if (value >= 5000) {
+                discount = '10% OFF';
+                margin = '38% a 45%';
+                shipping = 'FOB Integrado';
+            }
+            
+            if (currentType === 'plastico') {
+                margin = (parseInt(margin.split('%')[0]) + 3) + '%' + ' a ' + (parseInt(margin.split('a ')[1].split('%')[0]) + 5) + '%';
+            }
+            
+            document.getElementById('discountPercent').innerText = discount;
+            document.getElementById('resMargin').innerText = margin;
+            document.getElementById('shippingType').innerText = shipping;
+        }
+
+        // Lógica de FAQ
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Submissão de Formulário amigável (Google Ads compliant)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const cnpj = document.getElementById('cnpj').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const segment = document.getElementById('segment').value;
+            
+            // Formatando o link de WhatsApp para redirecionamento após preenchimento
+            const textMsg = `Olá! Meu nome é ${encodeURIComponent(name)}, falo em nome da empresa com CNPJ ${encodeURIComponent(cnpj || 'Não Informado')}. Sou do segmento ${encodeURIComponent(segment)} e gostaria de receber a tabela de atacado da Balca!`;
+            const waUrl = `https://wa.me/5551999999999?text=${textMsg}`;
+            
+            // Mostrando estado de sucesso (sem usar alert de sistema)
+            document.getElementById('leadForm').classList.add('hidden');
+            const successDiv = document.getElementById('successMessage');
+            successDiv.classList.remove('hidden');
+            document.getElementById('successWhatsappLink').setAttribute('href', waUrl);
+        }
+
+        // Carregamento Inicial do Simulador
+        window.onload = function() {
+            updateSimulation();
+        }
+    </script>
+</body>
+</html>
